@@ -10,12 +10,15 @@ class Server{
         this.port = process.env.PORT;
         this.usuariosPath = '/api/usuarios';
 
+
         // Middlewares
         this.middlewares();
 
         // Rutas de la aplicacion
         this.routes();
     }
+
+
 
 
     middlewares(){

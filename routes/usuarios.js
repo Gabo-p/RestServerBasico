@@ -1,5 +1,5 @@
 const { Router } = require('express');
-const { getUsuarios, putUsuarios, postUsuarios, deleteUsuarios } = require('../controllers/usuarios');
+const { getUsuarios, getUsuario, putUsuarios, postUsuarios, deleteUsuarios, loginUsuario } = require('../controllers/usuarios');
 
 const router = Router();
 
@@ -7,7 +7,11 @@ const router = Router();
 
 router.get('/',  getUsuarios);
 
+router.get('/:id',  getUsuario);
+
 router.post('/', postUsuarios);
+
+router.post('/login/', loginUsuario);
 
 router.delete('/', deleteUsuarios);
 
